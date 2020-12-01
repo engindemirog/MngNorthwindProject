@@ -14,8 +14,13 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (NorthwindContext context = new NorthwindContext())
             {
+                //Veri tabanı tablosuna eşleştirme
                 var updatedEntity = context.Entry(entity);
+
+                //Hangi işlem uygulanacak? Güncelleme,silme,ekleme
                 updatedEntity.State = EntityState.Added;
+
+                //Execute- Çalıştır
                 context.SaveChanges();
             }
         }

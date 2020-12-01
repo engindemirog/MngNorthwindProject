@@ -12,6 +12,8 @@ namespace ConsoleTest
             EfProductDal productDal = new EfProductDal();
             //List<Product> products = productDal.GetAll();
 
+            productDal.Add(new Product {CategoryId=1, ProductName="Acer Laptop", QuantityPerUnit="64 Gb Ram" , UnitPrice=10000, UnitsInStock=2 });
+
             foreach (var product in productDal.GetAll())
             {
                 Console.WriteLine(product.ProductName);
