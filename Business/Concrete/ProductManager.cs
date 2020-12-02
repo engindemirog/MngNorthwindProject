@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.CustomExceptions;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -20,7 +21,7 @@ namespace Business.Concrete
         {
             if (product.ProductName.Length<2)
             {
-                throw new Exception("Ürün ismi en az iki kararkter olmalıdır.");
+                throw new ProductNameException("Ürün ismi kurallara uygun değil.");
             }
 
             if (product.CategoryId==1)

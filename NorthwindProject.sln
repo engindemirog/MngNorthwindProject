@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTest", "ConsoleTest\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsUI", "WinFormsUI\WinFormsUI.csproj", "{3BDDD2DF-B458-457D-8949-929F4F3CF807}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandlingWorkaround", "ExceptionHandlingWorkaround\ExceptionHandlingWorkaround.csproj", "{92F0DADA-F253-4F87-8B97-11E68EE28184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncProgrammingWorkaround", "AsyncProgrammingWorkaround\AsyncProgrammingWorkaround.csproj", "{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{3BDDD2DF-B458-457D-8949-929F4F3CF807}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDDD2DF-B458-457D-8949-929F4F3CF807}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDDD2DF-B458-457D-8949-929F4F3CF807}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F0DADA-F253-4F87-8B97-11E68EE28184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F0DADA-F253-4F87-8B97-11E68EE28184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F0DADA-F253-4F87-8B97-11E68EE28184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F0DADA-F253-4F87-8B97-11E68EE28184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

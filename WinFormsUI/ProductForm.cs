@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.CustomExceptions;
 using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using System;
@@ -44,7 +45,20 @@ namespace WinFormsUI
                 UnitsInStock = Convert.ToInt16(tbxUnitsInStock.Text)
             };
 
-            _productService.Add(product);
+            try
+            {
+                _productService.Add(product);
+            }
+            catch (ProductNameException exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show("Bilinmeyen bir hata oluştu.");
+                MessageBox.Show($"Log : {exception.Message}");
+            }
+           
             ProductForm_Load(sender,e);
         }
     }
