@@ -13,5 +13,7 @@ namespace DataAccess.Abstract
         void Update(T entity);
         void Delete(T entity);
 
+
+
     }
 }

@@ -5,6 +5,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
@@ -36,7 +37,17 @@ namespace Business.Concrete
 
         public List<Product> GetAll()
         {
+            Console.WriteLine($"Normal Thread : {System.Threading.Thread.CurrentThread.ManagedThreadId}");
             return _productDal.GetAll();
+        }
+
+        public async Task<List<Product>> GetAllAsync()
+        {
+            return await Task.Run(()=> {
+                Console.WriteLine($"Async Thread : {System.Threading.Thread.CurrentThread.ManagedThreadId}");
+                return _productDal.GetAllAsync();
+            });
+            
         }
     }
 }

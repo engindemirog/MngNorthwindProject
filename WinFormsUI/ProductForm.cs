@@ -24,8 +24,8 @@ namespace WinFormsUI
         ICategoryService _categoryService = new CategoryManager(new EfCategoryDal());
         private void ProductForm_Load(object sender, EventArgs e)
         {
-            dgrwProducts.DataSource = null;
-            dgrwProducts.DataSource = _productService.GetAll();
+
+            MessageBox.Show(_productService.GetAllAsync().Result.Count.ToString()); 
 
             foreach (var category in _categoryService.GetAll())
             {
