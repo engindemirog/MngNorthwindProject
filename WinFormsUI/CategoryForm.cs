@@ -32,5 +32,10 @@ namespace WinFormsUI
             _categoryService.Add(category);
             CategoryForm_Load(sender,e);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(DateTime.Now.ToShortDateString());
+        }
     }
 }

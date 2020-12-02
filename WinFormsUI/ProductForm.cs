@@ -20,17 +20,24 @@ namespace WinFormsUI
         }
 
         IProductService _productService = new ProductManager(new EfProductDal());
+        ICategoryService _categoryService = new CategoryManager(new EfCategoryDal());
         private void ProductForm_Load(object sender, EventArgs e)
         {
             dgrwProducts.DataSource = null;
             dgrwProducts.DataSource = _productService.GetAll();
+
+            foreach (var category in _categoryService.GetAll())
+            {
+                cbxCategory.Items.Add(category);
+                cbxCategory.DisplayMember = "CategoryName";
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             var product = new Product
             {
-                CategoryId = Convert.ToInt32(tbxCategoryId.Text),
+                CategoryId = ((Category)cbxCategory.SelectedItem).CategoryId,
                 ProductName = tbxProductName.Text,
                 QuantityPerUnit = tbxQuantityPerUnit.Text,
                 UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),

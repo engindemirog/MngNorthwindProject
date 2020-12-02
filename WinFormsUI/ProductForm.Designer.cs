@@ -35,11 +35,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxProductName = new System.Windows.Forms.TextBox();
-            this.tbxCategoryId = new System.Windows.Forms.TextBox();
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
             this.tbxUnitsInStock = new System.Windows.Forms.TextBox();
             this.tbxQuantityPerUnit = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.cbxCategory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgrwProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,13 +106,6 @@
             this.tbxProductName.Size = new System.Drawing.Size(251, 27);
             this.tbxProductName.TabIndex = 6;
             // 
-            // tbxCategoryId
-            // 
-            this.tbxCategoryId.Location = new System.Drawing.Point(193, 379);
-            this.tbxCategoryId.Name = "tbxCategoryId";
-            this.tbxCategoryId.Size = new System.Drawing.Size(251, 27);
-            this.tbxCategoryId.TabIndex = 7;
-            // 
             // tbxUnitPrice
             // 
             this.tbxUnitPrice.Location = new System.Drawing.Point(193, 425);
@@ -144,16 +137,24 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // cbxCategory
+            // 
+            this.cbxCategory.FormattingEnabled = true;
+            this.cbxCategory.Location = new System.Drawing.Point(193, 386);
+            this.cbxCategory.Name = "cbxCategory";
+            this.cbxCategory.Size = new System.Drawing.Size(251, 28);
+            this.cbxCategory.TabIndex = 12;
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 645);
+            this.Controls.Add(this.cbxCategory);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.tbxQuantityPerUnit);
             this.Controls.Add(this.tbxUnitsInStock);
             this.Controls.Add(this.tbxUnitPrice);
-            this.Controls.Add(this.tbxCategoryId);
             this.Controls.Add(this.tbxProductName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -179,10 +180,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbxProductName;
-        private System.Windows.Forms.TextBox tbxCategoryId;
         private System.Windows.Forms.TextBox tbxUnitPrice;
         private System.Windows.Forms.TextBox tbxUnitsInStock;
         private System.Windows.Forms.TextBox tbxQuantityPerUnit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ComboBox cbxCategory;
     }
 }
