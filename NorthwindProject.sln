@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Busine
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{A6F87FCF-5BBE-4FBE-AA5F-1E715E59896A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsUI", "WinFormsUI\WinFormsUI.csproj", "{3BDDD2DF-B458-457D-8949-929F4F3CF807}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsUI", "WinFormsUI\WinFormsUI.csproj", "{3BDDD2DF-B458-457D-8949-929F4F3CF807}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandlingWorkaround", "ExceptionHandlingWorkaround\ExceptionHandlingWorkaround.csproj", "{92F0DADA-F253-4F87-8B97-11E68EE28184}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionHandlingWorkaround", "ExceptionHandlingWorkaround\ExceptionHandlingWorkaround.csproj", "{92F0DADA-F253-4F87-8B97-11E68EE28184}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncProgrammingWorkaround", "AsyncProgrammingWorkaround\AsyncProgrammingWorkaround.csproj", "{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncProgrammingWorkaround", "AsyncProgrammingWorkaround\AsyncProgrammingWorkaround.csproj", "{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{D393A853-4185-434E-B99B-D464837611DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DB3F7A0-B9AC-4648-A6B7-442938DB0030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D393A853-4185-434E-B99B-D464837611DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D393A853-4185-434E-B99B-D464837611DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D393A853-4185-434E-B99B-D464837611DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D393A853-4185-434E-B99B-D464837611DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
