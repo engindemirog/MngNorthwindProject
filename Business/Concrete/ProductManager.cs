@@ -27,7 +27,7 @@ namespace Business.Concrete
 
             if (product.CategoryId==1)
             {
-                throw new Exception("Şu an içecek kategorisinde ürün kabul edilmiyor.");
+                throw new CategoryForbiddenException("Şu an içecek kategorisinde ürün kabul edilmiyor.");
             }
 
             _productDal.Add(product);
@@ -48,6 +48,11 @@ namespace Business.Concrete
                 return _productDal.GetAllAsync();
             });
             
+        }
+
+        public Product GetById(int id)
+        {
+            return _productDal.GetById(id);
         }
     }
 }

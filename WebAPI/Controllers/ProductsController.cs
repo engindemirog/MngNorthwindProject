@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Business.Abstract;
+using Business.Concrete;
+using Business.CustomExceptions;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +21,43 @@ namespace WebAPI.Controllers
         public ProductsController(IProductService productService)
         {
             _productService = productService;
+
         }
 
-        public List<Product> GetAll()
+        [HttpGet("getall")]
+        public IActionResult GetAll()
         {
-            return _productService.GetAll();
+            return Ok(_productService.GetAll());
+        }
+
+        [HttpGet("getbyid")]
+        public IActionResult GetById(int id)
+        {
+            return Ok(_productService.GetById(id));
+        }
+
+        [HttpPost("add")]
+        public IActionResult Add(Product product)
+        {
+            try
+            {
+                _productService.Add(product);
+                return Ok("Ürün eklendi");
+            }
+            catch (ProductNameException exception) //known
+            {
+                return BadRequest(exception.Message);
+            }
+            catch (CategoryForbiddenException exception) //known
+            {
+                return BadRequest(exception.Message);
+            }
+            catch (Exception exception) //unknown
+            {
+                //Loglama kodu yazılır
+                return BadRequest("Bir hata oluştu");
+            }
+
         }
 
 

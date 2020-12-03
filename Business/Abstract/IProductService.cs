@@ -12,5 +12,6 @@ namespace Business.Abstract
         void Add(Product product);
 
         Task<List<Product>> GetAllAsync();
+        Product GetById(int id);
     }
 }
