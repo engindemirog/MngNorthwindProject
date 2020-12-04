@@ -20,10 +20,16 @@ namespace Business.Concrete
         {
             if (category.CategoryName.Length<2)
             {
-                throw new Exception("KAtegori ismi min 2 karakter olmalıdır");
+                throw new Exception("Kategori ismi min 2 karakter olmalıdır");
             }
 
             _categoryDal.Add(category);
+        }
+
+        public bool CheckIfCategoryStartsWithC(int categoryId)
+        {
+            //
+            return _categoryDal.CheckIfCategoryStartsWithC(categoryId);
         }
 
         public List<Category> GetAll()

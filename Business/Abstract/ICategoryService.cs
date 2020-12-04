@@ -9,5 +9,7 @@ namespace Business.Abstract
     {
         List<Category> GetAll();
         void Add(Category category);
+
+        bool CheckIfCategoryStartsWithC(int categoryId);
     }
 }

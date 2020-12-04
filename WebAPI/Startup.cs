@@ -31,6 +31,7 @@ namespace WebAPI
         {
             services.AddControllers();
             services.AddSingleton<IProductService, ProductManager>();
+            services.AddSingleton<ICategoryService, CategoryManager>();
             services.AddSingleton<IProductDal, EfProductDal>();
         }
 

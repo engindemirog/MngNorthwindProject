@@ -9,5 +9,7 @@ namespace DataAccess.Abstract
     public interface IProductDal:IEntityRepository<Product>,IAsyncEntityRepository<Product>
     {
         //CRUD
+        Product GetProductOfMonth();
+        List<Product> GetProductsByCategory(int categoryId);
     }
 }

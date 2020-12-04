@@ -20,6 +20,15 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
+        public bool CheckIfCategoryStartsWithC(int categoryId)
+        {
+            using (NorthwindContext context = new NorthwindContext())
+            {
+                var category = context.Categories.SingleOrDefault(c=>c.CategoryId==categoryId);
+                return category.CategoryName.ToLower().StartsWith("c");
+            }
+        }
+
         public void Delete(Category entity)
         {
             throw new NotImplementedException();
@@ -27,7 +36,7 @@ namespace DataAccess.Concrete.EntityFramework
 
         public List<Category> GetAll()
         {
-            using (NorthwindContext context=new NorthwindContext())
+            using (NorthwindContext context = new NorthwindContext())
             {
                 return context.Categories.ToList();
             }

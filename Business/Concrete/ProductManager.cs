@@ -12,14 +12,28 @@ namespace Business.Concrete
     public class ProductManager : IProductService
     {
         IProductDal _productDal;
+        ICategoryService _categoryService;
 
-        public ProductManager(IProductDal productDal)
+       
+
+        public ProductManager(IProductDal productDal, ICategoryService categoryService)
         {
             _productDal = productDal;
+            _categoryService = categoryService;
         }
 
         public void Add(Product product)
         {
+
+            if (_categoryService.CheckIfCategoryStartsWithC(product.CategoryId))
+            {
+                throw new Exception();
+            }
+            if (_productDal.GetProductsByCategory(product.CategoryId).Count >= 10)
+            {
+                //throw exception
+            }
+            //Bir kategoride max 10 farklı ürün olabilir kuralı getiriyor.
             if (product.ProductName.Length<2)
             {
                 throw new ProductNameException("Ürün ismi kurallara uygun değil.");
