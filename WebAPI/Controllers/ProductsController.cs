@@ -27,7 +27,7 @@ namespace WebAPI.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            return Ok(_productService.GetAll());
+            return Ok(_productService.GetAllAsync().Result);
         }
 
         [HttpGet("getbyid")]

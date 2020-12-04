@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Abstract
+namespace Core.Entities
 {
     //Bunu implemente ediyorsa, o bir veritabanı nesnesidir.
     public interface IEntity
