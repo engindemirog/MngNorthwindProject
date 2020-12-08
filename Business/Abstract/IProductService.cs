@@ -13,5 +13,6 @@ namespace Business.Abstract
 
         Task<List<Product>> GetAllAsync();
         Product GetById(int id);
+        List<Product> GetByCategory(int id);
     }
 }
