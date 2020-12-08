@@ -30,6 +30,12 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddCors(options=> {
+                options.AddPolicy("AllowOrigin", builder => builder.WithOrigins("http://localhost:3000"));
+            
+            });
+
             services.AddSingleton<IProductService, ProductManager>();
             services.AddSingleton<ICategoryService, CategoryManager>();
             services.AddSingleton<IProductDal, EfProductDal>();
@@ -45,7 +51,10 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:3000").AllowAnyHeader());
+
             app.UseHttpsRedirection();
+            
 
             app.UseRouting();
 
